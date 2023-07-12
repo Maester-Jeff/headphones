@@ -175,18 +175,18 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  #header-content {
+    height: 100%;
+  }
+
   .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
-  .header-logo, a, img {
-    width: 160px,
-    height: 30px
-  }
-
-   /* Nav Bar
+    /* Nav Bar
       ============================= */
   
   .nav-bar ul {
@@ -221,10 +221,11 @@
       ============================= */
       
   .section-hero {
-    display: flex;
     text-align: var(--section-header-align);
     padding: var(--section-header-padding);
-    justify-content: center;
+    display: flex;
+    justify-content: space;
+    align-content: flex-end;
     flex-direction: column;
   }
 
