@@ -17,25 +17,23 @@
    :root {
     --color-primary: #FF6565;
     --color-dark-blue: #071629;
-    --color-black:  #090909;
     --color-white: #ffffff;
-    --color-grey: #a0a0a0;
   
       
-    --text-color: var(--color-dark-blue);
+    --text-color: var(--color-dark-blue), var(--color-white);
   
     --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   
-    --font-size-small: 1.2rem;
-    --font-size-medium: 1.6rem;
+    --font-size-small: 1.3rem;
+    --font-size-medium: 1.5rem;
     --font-size-large: 1.8rem;
-    --font-size-x-large: 3.0rem;
+    --font-size-x-large: 2.8rem;
     --font-size-xx-large: 4.8rem;
   
-    --font-weight-regular: 500;
-    --font-weight-semi-bold: 650;
-    --font-weight-bold: 800;
+    --font-weight-regular: 300;
+    --font-weight-semi-bold: 500;
+    --font-weight-bold: 700;
   
     --line-height-small: 1.2;
     --line-height-base: 1.5;
@@ -47,23 +45,15 @@
     --section-header-align: center;
     --section-title-font-size: var(--font-size-x-large);
     --section-title-font-weight: var(--font-weight-bold);
-    --section-title-line-height: var(--line-height-big);
+    --section-title-line-height: var(--line-height-base);
     --section-title-margin: 0;
-    --section-title-color: var(--color-dark-blue);
     --section-tagline-transform: lowercase;
     --section-tagline-color: var(--color-dark-blue);
-    --section-tagline-font-family: var(--font-family-headings);
+    --section-tagline-font-size: var(var--font-size-medium)
+    --section-tagline-font-family: var(--font-family-title);
     --section-tagline-font-weight: var(--font-weight-bold);
-    --section-tagline-margin: 0;
-    --section-body-padding: 2rem 0 4rem;
-    --section-footer-padding: 3rem 0 0;
+    --section-tagline-margin-top: 0;
     --section-footer-align: center;
-  
-    /** HEADER **/
-    --header-padding: 4rem 0 0;
-  
-    /** FOOTER **/
-    --footer-padding: 5rem 0 1rem;
   
     /** NAVBAR **/
     --nav-item-font-family: var(--font-family-headings);
@@ -77,10 +67,10 @@
     /** BUTTON **/
     --button-display: inline-block;
     --button-padding: 1.5rem 3rem;
-    --button-border: none;
-    --button-color: var(--color-black);
+    --button-border: 0.5px;
+    --button-color: var(--color-white);
     --button-text-decoration: none;
-    --button-font-size: var(--font-size-large);
+    --button-font-size: var(--font-size-small);
     --button-hover-color: var(--color-white);
     --button-hover-text-decoration: none;
     --button-hover-background: var(--color-primary);
@@ -92,10 +82,6 @@
   
   /* Base
       ============================= */
-  
-  *, *:before, *:after {
-    box-sizing: border-box;
-  }
   
   html {
   scroll-behavior: smooth;
@@ -141,6 +127,9 @@
     font-size: var(--button-font-size);
     color: var(--color-white);
     text-decoration: var(--button-text-decoration);
+    border-radius: 100px;
+    width: 162px;
+    height: 44px;
   }
   
   .button:hover {
@@ -164,43 +153,95 @@
     white-space: nowrap;
   }
 
-  /*** 2. LAYOUT **/
-  /* Header
+  /*** 2. PAGE LAYOUT **/
+
+  /* Layout
       ============================= */
+
+  .container {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* a). Header
+      ============================= */
+
   .header {
     display: flex;
-    position: relative;
-    background: transparent;
-    padding: var(--header-padding)
+    height: 800px;
+    padding: var(--header-padding);
+    background-image: url(./Figma-design-files/background-top.png);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
-/*** 2. SECTIONS **/
-  /* Section all styles
-      ============================= */
-  .section {
-    padding: var(--section-padding);
+  
+  .header-logo, a, img {
+    width: 160px,
+    height: 30px
   }
+
+   /* Nav Bar
+      ============================= */
+  
+  .nav-bar ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  ul .nav-item {
+    color: var(--color-white);
+  }
+  .header-hamburger {
+    display: none;
+  }
+  
+  @media screen and (max-width: 780px) {
+    .header-hamburger {
+      display: block;
+    }
+    .nav-bar ul {
+      display: none;
+    }
+    .header-container {
+      flex-direction: row-reverse;
+    }
+  }
+  
+/*** 2. SECTIONS **/
+  /* Hero section
+      ============================= */
       
-  .section-header {
+  .section-hero {
+    display: flex;
     text-align: var(--section-header-align);
     padding: var(--section-header-padding);
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .section-hero .section-body {
+    color: var(--color-white);
   }
       
-  .section-title {
+  .section-hero .section-title {
     font-size: var(--section-title-font-size);
     font-weight: var(--section-title-font-weight);
     line-height: var(--section-title-line-height);
     margin: var(--section-title-margin);
-    color: var(--section-title-color);
+    color: var(--color-white);
   }
       
   .section-tagline {
-    color: var(--section-tagline-color);
+    color: var(--color-white);
     font-family: var(--section-tagline-font-family);
     text-transform: var(--section-tagline-transform);
     font-weight: var(--section-tagline-font-weight);
@@ -215,12 +256,6 @@
     padding: var(--section-footer-padding);
     text-align: var(--section-footer-align);
   }
+
   /* Hero Section
       ============================= */
-  .section-call-to-action {
-    background-image: url(./Figma\ design\ files/);
-    background-position: 75% 0;
-    background-repeat: no-repeat;
-    background-size: 90rem auto;
-    background-image;
-  }
