@@ -4,7 +4,7 @@ A webpage is developed from scratch and the figma design files below used to gen
 
 How the webpage appears for mobile screens.
 
-![Figma design file for mobile screens](01_headphones_mobile@2x.png)
+![Figma design file for mobile screens](./Figma-design-files/01_headphones_mobile@2x.png)
 
 
 How the webpage appears for tablet screens.
