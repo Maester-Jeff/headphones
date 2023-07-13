@@ -1,6 +1,6 @@
 /* SUMMARY
     1. GLOBAL
-    2. LAYOUT
+    2. PAGE LAYOUT
     3. SECTION
 */
 
@@ -156,6 +156,7 @@
 
   /* Base Styling
     ============================= */
+
   html {
   scroll-behavior: smooth;
   }
@@ -179,7 +180,6 @@
 
   .nav-item a:visited {
     font-style: italic;
-
   }
 
   .nav-item a:hover {
@@ -239,7 +239,6 @@
     max-width: 1000px; 
     margin: 0 auto;
     display: flex;
-     
   }
   
   /* a). Header
@@ -273,6 +272,9 @@
       text-align: center;
       gap: 40px;
     }
+
+    /* Media Screen Configuration
+        ============================= */
 
     @media screen and (max-width: 480px) {
       .header-hamburger {
@@ -400,7 +402,7 @@
       margin: 0;
     }
 
-    /** What we do... section 
+      /** b). What we do... section 
         =============================**/
     .section-what-we-do {
       max-width: 1000px;
