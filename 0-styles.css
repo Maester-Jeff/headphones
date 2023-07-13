@@ -18,13 +18,15 @@
     --color-primary: #FF6565;
     --color-dark-blue: #071629;
     --color-white: #ffffff;
-        
-    --font-family-base: 'Source-sans-pro-Regular';
-    --font-family-title: 'Source-sans-pro-semibold';
-    --font-family-bold: 'Source-sans-pro-bold'
+    
+    --text-color: var(--color-dark-blue), var(--color-white);
 
-    --font-size-small: 1.3rem;
-    --font-size-medium: 1.5rem;
+    --font-family-base: 'Source-sans-pro-regular';
+    --font-family-title: 'Source-sans-pro-semibold';
+    --font-family-bold: 'Source-sans-pro-bold';
+
+    --font-size-small: 1.0rem;
+    --font-size-medium: 1.6rem;
     --font-size-large: 1.8rem;
     --font-size-x-large: 2.8rem;
     --font-size-xx-large: 4.8rem;
@@ -36,5 +38,283 @@
     --line-height-small: 1.2;
     --line-height-base: 1.5;
     --line-height-big: 1.8;
+
+
+
+  /** MOTION **/
+
+  --transition-duration: .3s;
+  --transition-cubic-bezier: cubic-bezier(0.17, 0.67, 0, 1.01);
+  }
+  
+  /** FONTS **/
+
+   @font-face {
+    font-family: 'Source-sans-pro-regular';
+    font-weight: var(--font-weight-regular);
+    src: url("./Sourcesanspro/SourceSansPro-Regular.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: 'Source-sans-pro-semibold';
+    font-weight: var(--font-weight-semi-bold);
+    src: url("./Sourcesanspro/SourceSansPro-Semibold.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: 'Source-sans-pro-bold';
+    font-weight: var(--font-weight-bold);
+    src: url("./Sourcesanspro/SourceSansPro-Bold.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: 'holberton_school-icon';
+    src:  url('fonts/holberton_school-icon.eot?sq4eq4');
+    src:  url('fonts/holberton_school-icon.eot?sq4eq4#iefix') format('embedded-opentype'),
+      url('fonts/holberton_school-icon.ttf?sq4eq4') format('truetype'),
+      url('fonts/holberton_school-icon.woff?sq4eq4') format('woff'),
+      url('fonts/holberton_school-icon.svg?sq4eq4#holberton_school-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'holberton_school-icon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .holberton_school-icon-arrow_1:before {
+    content: "\e900";
+  }
+  .holberton_school-icon-arrow_2:before {
+    content: "\e901";
+  }
+  .holberton_school-icon-arrow_3:before {
+    content: "\e902";
+  }
+  .holberton_school-icon-arrow_4:before {
+    content: "\e903";
+  }
+  .holberton_school-icon-arrow_5:before {
+    content: "\e904";
+  }
+  .holberton_school-icon-check:before {
+    content: "\e905";
+  }
+  .holberton_school-icon-ic_bag:before {
+    content: "\e906";
+  }
+  .holberton_school-icon-ic_cart:before {
+    content: "\e907";
+  }
+  .holberton_school-icon-ic_facebook:before {
+    content: "\e908";
+  }
+  .holberton_school-icon-ic_hearing:before {
+    content: "\e909";
+  }
+  .holberton_school-icon-ic_instagram:before {
+    content: "\e90a";
+  }
+  .holberton_school-icon-ic_laptop:before {
+    content: "\e90b";
+  }
+  .holberton_school-icon-ic_money:before {
+    content: "\e90c";
+  }
+  .holberton_school-icon-ic_music:before {
+    content: "\e90d";
+  }
+  .holberton_school-icon-ic_sound:before {
+    content: "\e90e";
+  }
+  .holberton_school-icon-ic_twitter:before {
+    content: "\e90f";
+  }
+  .holberton_school-icon-ic_video:before {
+    content: "\e910";
+  }
+  .holberton_school-icon-menu:before {
+    content: "\e911";
+  }
+  .holberton_school-icon-search_1:before {
+    content: "\e912";
+  }
+  .holberton_school-icon-search_2:before {
+    content: "\e913";
+  }
+  .holberton_school-icon-star:before {
+    content: "\e914";
+  }
+
+  /* Base Styling
+    ============================= */
+  html {
+  scroll-behavior: smooth;
+  }
+
+  body {
+    color: var(--text-color);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-bold);
+  }
+
+  .nav-item a {
+    color: var(--color-white);
+    text-decoration: none;
+  }
+
+  .nav-item a:visited {
+    font-style: italic;
+
+  }
+
+  .nav-item a:hover {
+    text-decoration: none;
+    color: var(--color-primary);
+  }
+
+  .nav-item a:active {
+    background-color: transparent;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 0.5rem;
+    border: 1px;
+    margin-bottom: 20px;;
+    font-size: var(--font-size-small);
+    color: var(--color-white);
+    background-color: var(--color-white);
+    text-decoration: none;
+    border-radius: 80px;
+    width: 162px;
+    height: 44px;
+  }
+
+  .button:hover {
+    text-decoration: none;
+    color: var(--color-white);
+    background-color: transparent;
+    transition-duration: .3s;
+    opacity: 0.9;
+  }
+
+  /** 2. PAGE LAYOUT **/
+
+  .wrapper {
+    max-width: 1000px; 
+    min-inline-size: 200px; 
+    margin: 0 auto;
+    display: flex;
+     
+  }
+  
+  /* a). Header
+    ============================= */
+
+    .header {
+      height: 800px;
+      padding: 0 0 3rem;
+      background-image: url(./Figma-design-files/background-top.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: var(--font-size-small);
+      padding-top: 32px;
+    }
+
+    /* Nav Bar
+      ============================= */
+  
+    .nav-bar ul {
+      margin: 0;
+      list-style: none;
+      display: flex;
+      text-align: center;
+      gap: 40px;
+    }
+
+    .header-hamburger {
+      display: none;
+    }
+
+    @media screen and (max-width: 480px) {
+      .header-hamburger {
+        display: block;
+      }
+      
+      .nav-bar ul {
+        display: none;
+      }
+      
+      .header-container {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        gap: 70px;
+        padding-top: 32px;
+        position: relative;
+      }
+    }
+    /** Hero section 
+        =============================**/
+
+    .section-hero {
+      text-align: center;
+      padding: 0 0 3rem;
+      margin-left: 340px;
+      font-size: var(--font-size-small);
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      position: absolute;
+      bottom: 20px;
+    }
+
+    .section-hero .section-body {
+      color: var(--color-white);
+    }
+        
+    .section-hero .section-title {
+      font-size: var(--font-size-x-large);
+      font-weight: var(--font-weight-bold);
+      line-height: var(--line-height-base);
+      margin: 0;
+      color: var(--color-white);
+    }
+    .section-tagline {
+      color: var(--color-white);
+      font-family: var(--font-family-title);
+      text-transform: lowercase;
+      font-weight: var(--font-weight-bold);
+      margin: 0;
+    }
   
   
+  
+    
+
+
+
