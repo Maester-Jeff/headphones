@@ -273,9 +273,7 @@
       gap: 40px;
     }
 
-    .header-hamburger {
-      display: none;
-    }
+    
 
     @media screen and (max-width: 480px) {
       .header-hamburger {
@@ -322,6 +320,27 @@
       }
     }
     
+    @media screen and (min-width: 1024px) {
+      .header-hamburger {
+        display: none;
+      }
+ 
+      .nav-bar ul {
+        margin: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        gap: 40px;
+      }
+
+      .header-container {
+        justify-content: space-between;
+        gap: 70px;
+        padding-top: 32px;
+        position: relative;
+      }
+    }
     /** Hero section 
         =============================**/
 
