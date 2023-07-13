@@ -19,8 +19,6 @@
     --color-dark-blue: #071629;
     --color-white: #ffffff;
     
-    --text-color: var(--color-dark-blue), var(--color-white);
-
     --font-family-base: 'Source-sans-pro-regular';
     --font-family-title: 'Source-sans-pro-semibold';
     --font-family-bold: 'Source-sans-pro-bold';
@@ -38,8 +36,6 @@
     --line-height-small: 1.2;
     --line-height-base: 1.6;
     --line-height-big: 1.8;
-
-
 
   /** MOTION **/
 
@@ -165,7 +161,7 @@
   }
 
   body {
-    color: var(--text-color);
+    color: var(--color-white);
     font-family: var(--font-family-base);
     font-size: var(--font-size-small);
     font-weight: var(--font-weight-regular);
@@ -221,21 +217,20 @@
   .circle {
     width: 100px;
     height: 100px;
+    border: 1px;
+    border-color: var(--color-dark-blue);
     border-radius: 50%;
-    background-color: var(--color-dark-blue);
+    background-color: transparent;
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
+    animation-duration: 0.3s;
     transition: opacity 0.5s;
   }
 
   .circle:hover {
     opacity: 1;
-  }
-
-  #target {
-    cursor: pointer;
   }
 
   /** 2. PAGE LAYOUT **/
@@ -271,6 +266,7 @@
   
     .nav-bar ul {
       margin: 0;
+      color: var(--color-white);
       list-style: none;
       display: flex;
       text-align: center;
@@ -279,7 +275,6 @@
 
     .header-hamburger {
       display: none;
-  
     }
 
     @media screen and (max-width: 480px) {
@@ -298,7 +293,35 @@
         padding-top: 32px;
         position: relative;
       }
+
+      .hero-section {
+        display: block;
+        justify-content: center;
+      }
     }
+
+    @media screen and (min-width: 768px) {
+      .header-hamburger {
+        display: none;
+      }
+
+      .nav-bar ul {
+        margin: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        gap: 40px;
+      }
+
+      .header-container {
+        justify-content: space-between;
+        gap: 70px;
+        padding-top: 32px;
+        position: relative;
+      }
+    }
+    
     /** Hero section 
         =============================**/
 
