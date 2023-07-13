@@ -274,11 +274,10 @@
       gap: 40px;
     }
 
-    
-
     @media screen and (max-width: 480px) {
       .header-hamburger {
         display: block;
+        margin-left: 30px;
       }
       
       .nav-bar ul {
@@ -296,6 +295,10 @@
       .hero-section {
         display: block;
         justify-content: center;
+      }
+
+      .section-what-we-do .footer ul {
+        flex-wrap: wrap;
       }
     }
 
@@ -318,6 +321,16 @@
         gap: 70px;
         padding-top: 32px;
         position: relative;
+      }
+
+      .section-what-we-do {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .section-what-we-do .footer ul {
+        flex-wrap: wrap;
       }
     }
     
@@ -342,6 +355,7 @@
         position: relative;
       }
     }
+
     /** Hero section 
         =============================**/
 
@@ -361,7 +375,6 @@
       display: flex;
       flex-direction: column;
       gap: 40px;
-
     }
 
     .section-hero .section-body {
@@ -386,6 +399,7 @@
       font-weight: var(--font-weight-bold);;
       margin: 0;
     }
+
     /** What we do... section 
         =============================**/
     .section-what-we-do {
@@ -398,14 +412,16 @@
       justify-content: center;
       flex-direction: column;
       margin-left: 130px;
+      margin-bottom: 40px;
     }
 
     .section-what-we-do .section-header {
-      margin-bottom: 20px; 
+      margin-top: 50px; 
     }
 
     .section-what-we-do .section-body {
-      margin: 50px;
+      margin-top: 20px;
+      margin-bottom: 80px;
     }
 
     .section-what-we-do .section-footer {
@@ -415,9 +431,11 @@
     .section-what-we-do .footer ul {
       display: flex;
       flex-direction: row;
+      align-items:flex-end;
       list-style: none;
+      gap: 90px;
     }
-  
+
     
 
 
