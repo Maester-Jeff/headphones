@@ -25,9 +25,9 @@
     --font-family-title: 'Source-sans-pro-semibold';
     --font-family-bold: 'Source-sans-pro-bold';
 
-    --font-size-small: 1.0rem;
-    --font-size-medium: 1.6rem;
-    --font-size-large: 1.8rem;
+    --font-size-small: 0.875rem;
+    --font-size-medium: 1.0rem;
+    --font-size-large: 2.0rem;
     --font-size-x-large: 2.8rem;
     --font-size-xx-large: 4.8rem;
   
@@ -36,7 +36,7 @@
     --font-weight-bold: 700;
   
     --line-height-small: 1.2;
-    --line-height-base: 1.5;
+    --line-height-base: 1.6;
     --line-height-big: 1.8;
 
 
@@ -202,7 +202,7 @@
     margin-bottom: 20px;;
     font-size: var(--font-size-small);
     color: var(--color-white);
-    background-color: var(--color-white);
+    background-color: var(--color-primary);
     text-decoration: none;
     border-radius: 80px;
     width: 162px;
@@ -212,16 +212,36 @@
   .button:hover {
     text-decoration: none;
     color: var(--color-white);
-    background-color: transparent;
+    background-color: (--color-primary);
     transition-duration: .3s;
+    cursor: pointer;
     opacity: 0.9;
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--color-dark-blue);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .circle:hover {
+    opacity: 1;
+  }
+
+  #target {
+    cursor: pointer;
   }
 
   /** 2. PAGE LAYOUT **/
 
   .wrapper {
     max-width: 1000px; 
-    min-inline-size: 200px; 
     margin: 0 auto;
     display: flex;
      
@@ -232,10 +252,10 @@
 
     .header {
       height: 800px;
-      padding: 0 0 3rem;
+      padding: 0;
       background-image: url(./Figma-design-files/background-top.png);
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: contain;
     }
     
     .header-container {
@@ -247,7 +267,7 @@
     }
 
     /* Nav Bar
-      ============================= */
+      ============================= */ 
   
     .nav-bar ul {
       margin: 0;
@@ -259,6 +279,7 @@
 
     .header-hamburger {
       display: none;
+  
     }
 
     @media screen and (max-width: 480px) {
@@ -282,33 +303,44 @@
         =============================**/
 
     .section-hero {
+      min-height: 100px;
+      position: absolute;
+      bottom: 0px;
+      margin-bottom: 0px;
+    }
+
+    .section-hero {
       text-align: center;
+      line-height: var(--line-height-small);
       padding: 0 0 3rem;
       margin-left: 340px;
-      font-size: var(--font-size-small);
+      font-family: var(--font-family-base);
       display: flex;
-      justify-content: flex-end;
       flex-direction: column;
-      position: absolute;
-      bottom: 20px;
+      gap: 40px;
+
     }
 
     .section-hero .section-body {
       color: var(--color-white);
+      font-size: var(--font-size-small);
+      line-height: var(--line-height-base);
+      margin-top: 0;
     }
         
     .section-hero .section-title {
-      font-size: var(--font-size-x-large);
+      font-size: var(--font-size-large);
+      font-family: var(--font-family-bold);
       font-weight: var(--font-weight-bold);
-      line-height: var(--line-height-base);
       margin: 0;
       color: var(--color-white);
     }
-    .section-tagline {
+    .section-hero .section-tagline {
       color: var(--color-white);
       font-family: var(--font-family-title);
+      font-size: var(--font-size-medium);
       text-transform: lowercase;
-      font-weight: var(--font-weight-bold);
+      font-weight: var(--font-weight-bold);;
       margin: 0;
     }
   
