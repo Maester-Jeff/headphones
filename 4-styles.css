@@ -1,10 +1,9 @@
 /* SUMMARY
     1. GLOBAL
     2. PAGE LAYOUT
-    3. SECTION
 */
 
-/*** 1. GLOBAL ***/
+/** 1. GLOBAL **/
 
 /* Reset / Normalize
    ============================= */
@@ -273,8 +272,6 @@
       gap: 40px;
     }
 
-    
-
     /* Media Screen Configuration
         ============================= */
 
@@ -418,7 +415,7 @@
       margin: 0;
     }
 
-      /** b). What we do... section 
+    /** b). What we do... section 
         =============================**/
     .section-what-we-do {
       max-width: 1000px;
@@ -463,8 +460,9 @@
       list-style: none;
       gap: 90px;
     }
-    /** Hero section 
-          =============================**/
+  
+    /** c.)** Our results section 
+            =============================**/
 
     .our-results {
       height: 650px;
@@ -528,7 +526,8 @@
       font-size: var(--font-size-x-large);
     }
   
-    /** Contact section 
+    
+    /** d.) Contact section 
           =============================**/
     
     .section-contact {
@@ -561,7 +560,7 @@
       font-size: var(--font-size-medium);
     }
 
-    /** Footer section 
+    /** e.) Footer section 
           =============================**/
     
     .footer-section {
